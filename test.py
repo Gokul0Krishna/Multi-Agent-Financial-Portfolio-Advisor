@@ -7,7 +7,7 @@ DB_PASSWORD = os.getenv('server_password')
 # print(DB_PASSWORD)
 
 conn = psycopg2.connect(
-    dbname="postgres", user="postgres", password=DB_PASSWORD, host="localhost"
+    dbname="postgres", user="postgres", password=DB_PASSWORD, host="localhost",port = '5432'
 )
 conn.autocommit = True
 cur = conn.cursor()
